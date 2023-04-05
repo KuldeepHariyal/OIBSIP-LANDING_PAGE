@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,600;1,100;1,200;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.header{
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 20px
+}
+.logo h1{
+    color: orangered;
+    font-size: 2rem;
+}
+.logo span{
+    color: rgb(28, 42, 6);
+}
+.nav_link{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+}
+.nav_link a{
+    display: inline-block;
+    padding: 5px 30px;
+    border-radius: 20px;
+    transition: 0.3s;
+    color: rgb(28, 42, 6);
+    font-size: 1.1rem;
+    font-weight: 400;
+    list-style: none;
+    text-decoration: none;
+}
+.navbar .nav_link a:hover{
+    background-color: rgb(245, 85, 5);
+    border-radius: 20px;
+}
+.menu_btn{
+    font-size: 2rem;
+    display: none;
+}
+.menu_btn .ri-close-line{
+    display: none;
+}
+main{
+    width: 100%;
+    height: 100vh;
+    background: url(images/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.content_section{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    padding:80px 50px;
+    backdrop-filter: blur(5px);
+}
+.content_section .left_section{
+    flex-basis: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content_section .left_section img{
+    width: 25rem;
+    height: 25rem;
+}
+.content_section .right_section{
+    flex-basis: 50%;
+    text-align: center;
+}
+.content_section .right_section h2{
+    font-size: 3rem;
+    color: rgb(11, 35, 27);
+}
+.content_section .right_section p{
+    font-size: 2rem;
+    color: rgb(151, 117, 59);
+}
+.btn{
+    font-size: 1.2rem;
+    margin-top: 30px;
+    padding: 15px;
+    border: 3px solid rgb(245, 85, 5);
+    background: transparent;
+    color:rgb(245, 85, 5);
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    transition: 0.3s;
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: rgb(245, 85, 5);
+    color:rgb(11, 35, 27);
+
+}
+.icon{
+    width: 100%;
+    height: 10vh;
+    text-align: center;
+    backdrop-filter: blur(5px);
+    z-index: -1;
+}
+.icon i{
+    font-size: 2.2rem;
+    margin: 0 10px;
+    cursor: pointer;
+}
+.icon .ri-twitter-fill:hover{
+    color: rgb(0, 153, 255);
+}
+.icon .ri-instagram-fill:hover{
+    color: rgb(255, 0, 68);
+}
+.icon .ri-facebook-circle-fill:hover{
+    color: blue;
+}
+@media (max-width:1060px){
+    .menu_btn {
+        display: block;
+        z-index: 999;
+    }
+    .navbar{
+        width: 100%;
+        height: 100vh;
+        background: yellow;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.3s;
+        opacity: 0;
+    }
+    .nav_link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .active .navbar{
+        opacity: 1;
+    }
+    .active .menu_btn .ri-menu-line{
+        display: none;
+    }
+    .active .menu_btn .ri-close-line{
+        display: block;
+    }
+}
+@media (max-width:900px){
+    .content_section{
+        display: block;
+    }
+    .icon{
+        margin-top: 20px;
+    }
+}
+@media (max-width:450px){
+    .logo h1{
+        font-size: 1rem;
+    }
+    .menu_btn{
+        font-size: 1rem;    }
+    .content_section .left_section img{
+        width: 12rem;
+        height: 12rem;
+    }
+    .content_section .right_section h2{
+        font-size: 1.2rem;
+    }
+    .content_section .right_section p{
+        font-size: 1rem;
+    }
+    .btn{
+        font-size: 1rem;
+        margin-top: 15px;
+        padding: 5px;
+    }
+}

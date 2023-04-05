@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh juices.</title>
+    <link rel="shortcut icon" href="images/pngwing.com.png" type="image/x-icon" >
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1>Fresh <span>juices.</span></h1>
+        </div>
+        <nav class="navbar">
+            <ul class="nav_link">
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact us</a></li>
+            </ul>
+        </nav>
+        <div class="menu_btn">
+            <i class="ri-menu-line"></i>
+            <i class="ri-close-line"></i>
+        </div>
+    </header>
+    <main>
+        <section class="content_section">
+            <div class="left_section">
+                <div class="image">
+                    <img src="images/pngwing.com.png" alt="">
+                </div>
+            </div>
+            <div class="right_section">
+                <h2>Get Refreshed.</h2>
+                <p>with fresh fruit juices.</p>
+                <button class="btn">Comming soon</a></button>
+            </div>
+        </section>
+        <div class="icon">
+            <i class="ri-twitter-fill"></i>
+            <i class="ri-instagram-fill"></i>
+            <i class="ri-facebook-circle-fill"></i>
+        </div>
+        </div>
+    </main>
+    <script>
+        const mobile_nav = document.querySelector(".menu_btn");
+        const navbar = document.querySelector(".header");
+        const toggleNavbar = () => {
+            navbar.classList.toggle("active");
+        };
+        mobile_nav.addEventListener("click", () => toggleNavbar());
+    </script>
+</body>
+
+</html>
